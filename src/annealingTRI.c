@@ -174,7 +174,7 @@ double calc_AH_TRI(GRAPH* G,int s1,int s2,int r1,int r2,double tri,double* tri1,
 	for(i=0; i<ks1; ++i){			
 		for(j=0; j<ks2; ++j){
 			
-			if((G->node[s1].out[i] == G->node[s2].out[j])){   /// neighbours that had in common
+			if(G->node[s1].out[i] == G->node[s2].out[j]){   /// neighbours that had in common
 				
                 triNEW     = triNEW - 1./G->N;
 				

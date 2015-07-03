@@ -1,3 +1,4 @@
+#!/bin/sh
 #
 # RandNetGen
 #
@@ -18,33 +19,5 @@
 #
 
 
-AM_CPPFLAGS = 
+autoreconf -vfi
 
-
-bin_PROGRAMS = RandNetGen
-
-RandNetGen_SOURCES = \
-			annealingCbar.c	\
-			annealingCbar.h	\
-			annealingCk.c 	\
-			annealingCk.h 	\
-			annealingKnn.c	\
-			annealingKnn.h \
-			annealingPkkCbar.c \
-			annealingPkkCbar.h \
-			annealingPkkCk.c \
-			annealingPkkCk.h \
-			annealingPkkTRI.c \
-			annealingPkkTRI.h \
-			annealingTRI.c \
-			annealingTRI.h \
-			graph_library.c \
-			graph_library.h \
-			randnetgen.c \
-			randnetgen.h \
-			rewiring.c \
-			rewiring.h 
-
-ACLOCAL_AMFLAGS = -I m4
-
-CLEANFILES = *~

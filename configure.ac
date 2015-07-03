@@ -19,7 +19,7 @@
 
 AC_PREREQ([2.68])
 
-AC_INIT([randnetgen], [0.0.0], [<pol-email-here>])
+AC_INIT([randnetgen], [1.0.0], [<pol-email-here>])
 
 RANDNETGEN_MAJOR_VERSION=0
 RANDNETGEN_MID_VERSION=0

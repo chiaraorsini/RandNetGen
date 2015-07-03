@@ -181,7 +181,7 @@ double calc_AH(GRAPH* G,int s1,int s2,int r1,int r2,double *ck,double *ck2,doubl
 	for(i=0; i<ks1; ++i){			
 		for(j=0; j<ks2; ++j){
 			
-			if((G->node[s1].out[i] == G->node[s2].out[j])){
+			if(G->node[s1].out[i] == G->node[s2].out[j]){
 				
 				afectat = G->node[s1].out[i];
 				kaf     = G->node[afectat].k;
