@@ -21,7 +21,7 @@ SUBDIRS = src
 
 AM_CPPFLAGS = 
 
-EXTRA_DIST = 
+EXTRA_DIST = bootstrap.sh readme.md
 
 ACLOCAL_AMFLAGS = -I m4
 

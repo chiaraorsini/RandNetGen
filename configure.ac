@@ -72,8 +72,13 @@ AC_FUNC_REALLOC
 
 # Checks for libraries.
 AC_CHECK_LIB([m],[cos])
-AC_CHECK_LIB([gslcblas],[cblas_dgemm])
-AC_CHECK_LIB([gsl],[gsl_blas_dgemm])
+
+AC_SEARCH_LIBS([cblas_dgemm], [gslcblas], ,[AC_MSG_ERROR(
+		 [gsl required (https://www.gnu.org/software/gsl/)]
+		 )])
+AC_SEARCH_LIBS([gsl_blas_dgemm], [gsl], ,[AC_MSG_ERROR(
+		 [gsl required (https://www.gnu.org/software/gsl/)]
+		 )])
 
 
 AC_HEADER_ASSERT
