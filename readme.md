@@ -24,7 +24,7 @@ Code developed for the publication of articles in references [1,2].
 RandNetGen requires the GSL library: http://www.gnu.org/software/gsl/
 
 if the library is not installed in a common path, please provide the
-following options to the confgure command:
+following options to the configure command:
 
     ./configure  CPPFLAGS="-I/path_to_gsl_include" LDFLAGS="-L/path_to_gsl_lib" 
 
