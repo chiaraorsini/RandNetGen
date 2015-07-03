@@ -20,7 +20,7 @@
  * 
  * ******************************************************************************/
 
-#include "main.h"
+#include "randnetgen.h"
 
 
 int main(int argc, char * const argv[]){
