@@ -13,30 +13,44 @@ The program can fix:
 * The number of triangles
 * The clustering spectrum
 
-Randomize a network fixing some properties is equivalent to generate dk-random graphs [3]. Increasing values of d capture progressively more properties of the network.
+Randomizing a network fixing degree correlations is equivalent to generate dk-random graphs [3]. Increasing values of d capture progressively more properties of the network.
 dk 1 is equivalent to randomize the network fixing only the degree sequence. dk 2 fixes additionally the degree correlations. dk 2.1 fixes also the clustering coefficient and 2.5 de full clustering spectrum. 
 Randomize a network keeping some properties of the original network can be useful for studying the effect of a certain feature on any topological or dynamical property of a network.
 Compare real networks with randomized versions of them can also reveal formation patterns.
 Code developed for the publication of articles in references [1,2].
 
-## Requirements and Installation
+## Requirements 
 
-  You only need to install the GSL library: http://www.gnu.org/software/gsl/
-  
-  How to tutorial: http://www.brianomeara.info/tutorials/brownie/gsl
+RandNetGen requires the GSL library: http://www.gnu.org/software/gsl/
 
-## Compilation
+if the library is not installed in a common path, please provide the
+following options to the confgure command:
+
+    ./configure  CPPFLAGS="-I/path_to_gsl_include" LDFLAGS="-L/path_to_gsl_lib" 
+
+(A GSL  tutorial is available at
+http://www.brianomeara.info/tutorials/brownie/gsl )
+
+## Installation
 
   Simply run:
 
-    $ make 
+    $ sh ./bootsrap.sh
+    $ ./configure
+    $ make  # RandNetGen is now available in ./src/RandNetGen
+    $ (sudo) make install
 
-  The executable created is called **RandNetGen**
+  The executable created is called **RandNetGen** and it is installed
+  in the /usr/local/bin folder by default. If you want to install
+  RandNetGen in a local folder, please specify the prefix option to
+  the configure command:
+
+    $ ./configure --prefix="/local_folder"
 
 
-## Execution
+## Usage
 
-The executable is called **RandNetGen**. The program has a set of options. To introduce on option you must introduce first its option key (preceded by a dash), one white space and then the argument value. The only compulsory option is the input network file (-net).
+The executable is called **RandNetGen**. The program has multiple options. To introduce on option you must introduce first its option key (preceded by a dash), one white space and then the argument value. The only compulsory option is the input network file (-net).
 Arguments can appear in any order. If an argument does not appear the program gets the default value:
 
 Examples
@@ -206,8 +220,6 @@ Fixing a flat clustering spectrum of *C(k)=0.25* , preserving the joint degree d
 
 
 
-
-    
 
 ## Brief description of Random Network Generator
 
